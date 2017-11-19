@@ -27,7 +27,7 @@ function init() {
             my_object.key = (i.toString()).concat(j.toString());
             //my_object.date = makeWord();
             my_object.date = (i.toString()).concat(("0" + j).slice(-2));
-            my_object.value = Math.floor((Math.random()  * (0.5 - 0.1) + 0)* 100);
+            my_object.value = Math.floor((Math.random() * (0.5 - 0.1) + 0) * 100);
             data.push(my_object);
         }
 
@@ -43,13 +43,25 @@ function init() {
     var zoomer = d3.behavior.zoom()
         .on("zoom", null);
 
+    //Set Width and Height
+    var windowWidth = window.innerWidth;
+    
+    var windowHeight = window.innerHeight;
+    var mini_width_total = 100;
+    //var margin = { top: 20, left: 50, bottom: 30, right: 30 }
+    //var width = totalWidth - margin.left - margin.right;
+    //var height = totalHeight - margin.top - margin.bottom;
+    //var formatDecimal = d3.format(',.0f');
+
     var main_margin = { top: 10, right: 10, bottom: 30, left: 100 },
-        main_width = 500 - main_margin.left - main_margin.right,
+         main_width = 900 - main_margin.left - main_margin.right,
+        main_height = 500 - main_margin.top - main_margin.bottom;
+        //main_width = windowWidth - mini_width_total*1.5 - main_margin.left - main_margin.right,
         main_height = 400 - main_margin.top - main_margin.bottom;
 
     var mini_margin = { top: 10, right: 10, bottom: 30, left: 10 },
         mini_height = 400 - mini_margin.top - mini_margin.bottom;
-    mini_width = 100 - mini_margin.left - mini_margin.right;
+    mini_width = mini_width_total - mini_margin.left - mini_margin.right;
 
     svg = d3.select("#hBar").append("svg")
         .attr("class", "svgWrapper")

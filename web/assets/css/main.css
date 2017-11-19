@@ -310,4 +310,10 @@ a:after {
 			transition: all .1s ease-in-out;
 }
 
+.center-block {  
+  display: block;  
+  margin-right: auto;  
+  margin-left: auto;  
+}
+
 
