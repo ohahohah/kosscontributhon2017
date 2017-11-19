@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SING A SONG</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <!-- import chart css  -->
+    <link rel="stylesheet" href="assets/css/scatterPlot.css">
+    <link rel="stylesheet" href="assets/css/hBar.css">
+    <link rel="stylesheet" href="assets/css/pie.css">
+    <!-- import Font -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <section id="top" name="top">
+        <div id="headerwrap">
+            <div class="container">
+                <div class="logo">
+                    <img src="assets/img/logo.png">
+                </div>
+                <br>
+                <!-- title -->
+                <div class="row">
+                    <h1>When did this genre hit?</h1>
+                    <br>
+                    <h6>Created by Contributon 2017 Team Crawler.</h6>
+                    <br>
+                    <br>
+                    <div class="col-lg-6 col-lg-offset-3">
+                    </div>
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /headerwrap -->
+    </section>
+    <!-- scatterPlots - About All Information -->
+    <section id="allInfo" name="allInfo">
+        <div id="f">
+            <div class="container">
+                <div class="row">
+                    <h3>All Info</h3>
+                    <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <!-- chartBody -->
+                        <div id=scatterPlot>
+                            <svg width="960" height="500"></svg>
+                            <!-- TODO Genre Index -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /f -->
+    </section>
+    <!-- ==hBar(HorizontalBar)  - About specfic Genre == -->
+    <section id="genreInfo" name="genreSort">
+        <div id="f">
+            <div class="container">
+                <div class="row centered">
+                    <h3>Genre</h3>
+                    <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <!-- chartBody -->
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-4"></div>
+                            <div class="col-xs-6 col-sm-4"></div>
+                            <div class="col-xs-6 col-sm-4"></div>
+                            <div class="col-xs-6 col-sm-4"></div>
+                            <div class="col-xs-6 col-sm-4">
+                                <div class="center-block">
+                                    <select class="form-control">
+                                        <option selected="">Ballade</option>
+                                        <option>Dance</option>
+                                        <option>Rap/Hiphop</option>
+                                        <option>Rock/Metal</option>
+                                        <option>R&amp;B/Soul</option>
+                                        <option>Trot</option>
+                                        <option>Indie</option>
+                                        <option>Folk/Blues</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div id=hBar>
+                        </div>
+                    </div>
+                    <!-- col-lg-8 -->
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- f -->
+    </section>
+    <!-- ==pie chart - About specfic Genre, specific Priod == -->
+    <section id="genreYearInfo " name="genreYearInfo ">
+        <div id="f">
+            <div class="container ">
+                <div class="row centered ">
+                    <h3>Genre N Year</h3>
+                    <p class="centered "><i class="icon icon-circle "></i><i class="icon icon-circle "></i><i class="icon icon-circle "></i></p>
+                    <div class="col-lg-6 col-lg-offset-3 ">
+                        <!-- chartBody -->
+                        <div id=pie>
+                        </div>
+                    </div>
+                    <!-- col-lg-8 -->
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- f -->
+    </section>
+    <!-- import chart script -->
+    <script src="assets/js/scatterPlot.js "></script>
+    <script src="assets/js/hBar.js "></script>
+    <script src="assets/js/pie.js "></script>
+</body>
+
+</html>
