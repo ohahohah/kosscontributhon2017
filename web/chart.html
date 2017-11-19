@@ -15,6 +15,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
     <!-- import chart css  -->
     <link rel="stylesheet" href="assets/css/scatterPlot.css">
     <link rel="stylesheet" href="assets/css/hBar.css">
@@ -32,8 +33,8 @@
                     <img src="assets/img/logo.png">
                 </div>
                 <br>
+                <!-- title -->
                 <div class="row">
-                  <!-- title -->
                     <h1>When did this genre hit?</h1>
                     <br>
                     <h6>Created by Contributon 2017 Team Crawler.</h6>
@@ -57,7 +58,7 @@
                     <div class="col-lg-6 col-lg-offset-3">
                         <!-- chartBody -->
                         <div id=scatterPlot>
-                            
+                            <svg width="960" height="500"></svg>
                             <!-- TODO Genre Index -->
                         </div>
                     </div>
@@ -76,8 +77,27 @@
                     <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
                     <div class="col-lg-6 col-lg-offset-3">
                         <!-- chartBody -->
-                        <div id=hBar>
-                            <svg width="960" height="500"></svg>
+                        <div class="row">
+                            <div class="center-block">
+                                <div class="col-xs-6 col-sm-4"></div>
+                                <div class="col-xs-6 col-sm-4"></div>
+                                <div class="col-xs-6 col-sm-4"></div>
+                                <div class="col-xs-6 col-sm-4"></div>
+                                <div class="col-xs-6 col-sm-4">
+                                    <select class="form-control">
+                                        <option selected="">Ballade</option>
+                                        <option>Dance</option>
+                                        <option>Rap/Hiphop</option>
+                                        <option>Rock/Metal</option>
+                                        <option>R&amp;B/Soul</option>
+                                        <option>Trot</option>
+                                        <option>Indie</option>
+                                        <option>Folk/Blues</option>
+                                    </select>
+                                </div>
+                                <div id=hBar>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- col-lg-8 -->
@@ -97,8 +117,38 @@
                     <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
                     <div class="col-lg-6 col-lg-offset-3">
                         <!-- chartBody -->
+                        <div class="row">
+                            <div class="center-block">
+                                <!--selectBox-->
+                                <div class="col-xs-6 col-sm-6"></div>
+                                <div class="col-xs-6 col-sm-6"></div>
+                                <div class="col-xs-6 col-sm-6">
+                                    <select class="form-control">
+                                        <option selected="">Ballade</option>
+                                        <option>Dance</option>
+                                        <option>Rap/Hiphop</option>
+                                        <option>Rock/Metal</option>
+                                        <option>R&amp;B/Soul</option>
+                                        <option>Trot</option>
+                                        <option>Indie</option>
+                                        <option>Folk/Blues</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                    <select class="form-control">
+                                        <option>2011</option>
+                                        <option>2012</option>
+                                        <option>2013</option>
+                                        <option>2014</option>
+                                        <option>2015</option>
+                                        <option>2016</option>
+                                        <option selected="">2017</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/selectBox-->
                         <div id=pie>
-                            <svg width="960" height="500"></svg>
                         </div>
                     </div>
                     <!-- col-lg-8 -->
@@ -109,8 +159,6 @@
         </div>
         <!-- f -->
     </section>
-  <!-- About license-->
-
     <!-- import chart script -->
     <script src="assets/js/scatterPlot.js"></script>
     <script src="assets/js/hBar.js"></script>
