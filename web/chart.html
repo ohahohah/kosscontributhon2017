@@ -1,46 +1,138 @@
 <!DOCTYPE html>
 <html lang="kor">
-  <head>
-  	<meta charset="utf-8">
+
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-  	
-  	<title>SING A SONG</title>
-
+    <title>SING A SONG</title>
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="http://d3js.org/d3.v4.min.js"></script>
-
     <!-- import chart css  -->
-    <link rel="stylesheet" href="assets/css/multiLine.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js'></script>
+    <script src='https://d3js.org/d3-selection-multi.v1.min.js'></script>
+    <script src='https://d3js.org/d3-scale-chromatic.v1.min.js'></script>
+    <link rel="stylesheet" href="assets/css/scatterPlot.css">
+<!--     <link rel="stylesheet" href="assets/css/hBar.css">
+    <link rel="stylesheet" href="assets/css/pie.css">
+-->    <!-- import Font -->
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+</head>
 
-    <!-- import Font -->
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-  	<!-- MultiLineGraph -->
-    <div id= multiLineAll>
-      <svg width="960" height="500"></svg>
+<body>
+    <section id="top" name="top">
+        <div id="headerwrap">
+            <div class="container">
+                <div class="logo">
+                    <img src="assets/img/logo.png" width="70px">
+                </div>
+                <br>
+                <div class="row">
+                  <!-- title -->
+                  <h1>When did this genre hit?</h1>
+                  <br>
+                  <h6>Created by Contributon 2017 Team Crawler.</h6>
+                  <br>
+                  <br>
+                  <div class="col-lg-6 col-lg-offset-3">
+                  </div>
+              </div>
+          </div>
+          <!-- /container -->
+      </div>
+      <!-- /headerwrap -->
+  </section>
+  <!-- scatterPlots - About All Information -->
+  <section id="allInfo" name="allInfo">
+    <div id="f">
+        <div class="container">
+            <div class="row">
+                <h3>All Info</h3>
+                <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+                <div class="col-lg-6 col-lg-offset-3">
+                    <!-- chartBody -->
+                    <div id="scatterPlot">
+                        <!-- TODO Genre Index -->
+                    </div>
+                    <br>
+                    <!-- genre color example -->
+                    <div id="colorList1" class="pull-right">
+                        <p style="background:#3288bd;font-size:25px;color:#000;width:200px">Rap/Hiphop</p>
+                        <p style="background:#5e4fa2;font-size:25px;color:#F0F0F0;width:200px">Folk/Blues</p>
+                        <p style="background:#fee08b;font-size:25px;color:#000;width:200px">Rock/Metal</p>
+                        <p style="background:#d53e4f;font-size:25px;color:#F0F0F0;width:200px">R&B/Soul</p></div>
+                        <div id="colorList2">
+                            <p style="background:#f46d43;font-size:25px;color:#000;width:200px">Ballade</p>
+                            <p style="background:#66c2a5;font-size:25px;color:#000;width:200px">Dance</p>
+                            <p style="background:#abdda4;font-size:25px;color:#000;width:200px">Trot</p>
+                            <p style="background:#660E34;font-size:25px;color:#F0F0F0;width:200px">Indie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /f -->
+    </section>
+    <!-- ==hBar(HorizontalBar)  - About specfic Genre == -->
+    <section id="genreInfo" name="genreSort">
+        <div id="f">
+            <div class="container">
+                <div class="row centered">
+                    <h3>Genre</h3>
+                    <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <!-- chartBody -->
+                        <div id=hBar>
+                            <svg width="960" height="500"></svg>
+                        </div>
+                    </div>
+                    <!-- col-lg-8 -->
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- f -->
+    </section>
+    <!-- ==pie chart - About specfic Genre, specific Priod == -->
+    <section id="genreYearInfo" name="genreYearInfo">
+        <div id="f">
+            <div class="container">
+                <div class="row centered">
+                    <h3>Genre N Year</h3>
+                    <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <!-- chartBody -->
+                        <div id=pie>
+                            <svg width="960" height="500"></svg>
+                        </div>
+                    </div>
+                    <!-- col-lg-8 -->
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- f -->
+    </section>
+    <!-- About license-->
+    <div id="logo_license" style="color:white" align="center">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    <div id="bg_license" style="color:white" align="center">
+        Photo via <a href="https://www.goodfreephotos.com/">Good Free Photos</a>
     </div>
+    <!-- import chart script -->
+    <script src="assets/js/scatterPlot.js"></script>
+<!--     <script src="assets/js/hBar.js"></script>
+    <script src="assets/js/pie.js"></script>
+--></body>
 
-    <!-- import chart script -->  
-
-    <script  src="assets/js/multiLine.js"></script>
-
-  </body>
 </html>
