@@ -17,11 +17,9 @@
     <!-- D3 import-->
     <script src="http://d3js.org/d3.v4.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js'></script>
     <script src='https://d3js.org/d3-scale-chromatic.v1.min.js'></script>
     <script src='https://d3js.org/d3-selection-multi.v1.min.js'></script>
     <!-- import chart css  -->
-    <link rel="stylesheet" href="assets/css/scatterPlot.css">
     <link rel="stylesheet" href="assets/css/hBar.css">
     <link rel="stylesheet" href="assets/css/pie.css">
     <!-- import Font -->
@@ -34,11 +32,11 @@
         <div id="headerwrap">
             <div class="container">
                 <div class="logo">
-                    <img src="assets/img/logo.png" width="70px">
+                    <a href="index.html"><img src="assets/img/logo.png"></a>
                 </div>
                 <br>
-                <!-- title -->
                 <div class="row">
+                    <!-- title -->
                     <h1>When did this genre hit?</h1>
                     <br>
                     <h6>Created by Contributon 2017 Team Crawler.</h6>
@@ -51,39 +49,6 @@
             <!-- /container -->
         </div>
         <!-- /headerwrap -->
-    </section>
-    <!-- scatterPlots - About All Information -->
-    <section id="allInfo" name="allInfo">
-        <div id="f">
-            <div class="container">
-                <div class="row">
-                    <h3>All Info</h3>
-                    <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-                    <div class="col-lg-6 col-lg-offset-3">
-                        <!-- chartBody -->
-                        <div id="scatterPlot">
-                        </div>
-                        <br>
-                        <!-- genre color example -->
-                        <div id="colorList1" class="pull-right">
-                            <!-- <p><p style="background:#3288bd;font-size:25px;color:#000;width:10px">.</p>Rap/Hiphop</p> -->
-                            <p style="background:#5e4fa2;font-size:25px;color:#000;width:200px">Rap/Hiphop</p>
-                            <p style="background:#5e4fa2;font-size:25px;color:#F0F0F0;width:200px">Folk/Blues</p>
-                            <p style="background:#fee08b;font-size:25px;color:#000;width:200px">Rock/Metal</p>
-                            <p style="background:#d53e4f;font-size:25px;color:#F0F0F0;width:200px">R&B/Soul</p>
-                        </div>
-                        <div id="colorList2">
-                            <p style="background:#f46d43;font-size:25px;color:#000;width:200px">Ballade</p>
-                            <p style="background:#66c2a5;font-size:25px;color:#000;width:200px">Dance</p>
-                            <p style="background:#abdda4;font-size:25px;color:#000;width:200px">Trot</p>
-                            <p style="background:#660E34;font-size:25px;color:#F0F0F0;width:200px">Indie</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /container -->
-        </div>
-        <!-- /f -->
     </section>
     <!-- ==hBar(HorizontalBar)  - About specfic Genre == -->
     <section id="genreInfo" name="genreSort">
@@ -116,14 +81,13 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- col-lg-8 -->
                     </div>
-                    <!-- col-lg-8 -->
+                    <!-- row -->
                 </div>
-                <!-- row -->
+                <!-- container -->
             </div>
-            <!-- container -->
-        </div>
-        <!-- f -->
+            <!-- f -->
     </section>
     <!-- ==pie chart - About specfic Genre, specific Priod == -->
     <section id="genreYearInfo" name="genreYearInfo">
@@ -167,14 +131,29 @@
                         <!--/selectBox-->
                         <div id=pie>
                         </div>
-                        <!-- col-lg-8 -->
                     </div>
-                    <!-- row -->
+                    <!-- col-lg-8 -->
                 </div>
-                <!-- container -->
+                <!-- row -->
             </div>
-            <!-- f -->
+            <!-- container -->
+        </div>
+        <!-- f -->
     </section>
+    <!-- allInfo Link - About All Information -->
+    <section id="allInfoL" name="allInfoL">
+        <div id="f">
+            <div class="container">
+                <div class="row">
+                    <h3><a href="kosscontributhon2017/web/allInfo.html">All Info</a></h3>
+                    <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /f -->
+    </section>
+    
     <!-- About license-->
     <section id="copyrightInfo" name="copyrightInfo">
         <div id="f">
@@ -192,7 +171,6 @@
         </div>
     </section>
     <!-- import chart script -->
-    <script src="assets/js/scatterPlot.js"></script>
     <script src="assets/js/hBar.js"></script>
     <script src="assets/js/pie.js"></script>
 </body>
