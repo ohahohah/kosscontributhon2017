@@ -1,18 +1,15 @@
-body {
-  background-color: #444;
-  /*overflow: hidden;*/
-  margin: 0px;
-  padding: 0px;
-}
+
 .label {
   fill: #000;
   font-family: sans-serif;
   font-size: 14px;
 }
-svg{
+
+#scatterPlot{
   margin-left:-800px;
 }
-text {
+
+.tick {
   fill : #fff;
   font-size : 25px;
 }
