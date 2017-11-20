@@ -1,7 +1,7 @@
 // Tutorials of (Scatterplot d3 beautiful) by Jaydev
 
 // insert csv raw url
-d3.csv("https://raw.githubusercontent.com/NohYujeong/practice_d3_js/master/result2.csv", function(data){
+d3.csv("../assets/data/result.csv", function(data){
   /**
  * A D3 Scatter Plot chart with interactive nodes,
  * crosshair and custom axis grid.
