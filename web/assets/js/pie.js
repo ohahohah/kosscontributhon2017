@@ -15,10 +15,10 @@ svg.append("g")
 var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 
- var width = 960,
-     height = 450,
-//var width = windowWidth,
-//    height = windowWidth / 2 - 100,
+var width = 960,
+    height = 450,
+    //var width = windowWidth,
+    //    height = windowWidth / 2 - 100,
     radius = Math.min(width, height) / 2;
 
 var pie = d3.layout.pie()
@@ -41,7 +41,7 @@ var key = function(d) { return d.data.label; };
 
 var color = d3.scale.ordinal()
     .domain(["Jan", "Feb", "March", "Apir", "Mar", "June", "July", "Aug", "Sep", "Nov", "Dec"])
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00","#D0EFB1","#B3D89C","#9DC3C2","#77A6B6","#4D7298"]);
+    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#D0EFB1", "#B3D89C", "#9DC3C2", "#77A6B6", "#4D7298"]);
 
 function randomData() {
     var labels = color.domain();
