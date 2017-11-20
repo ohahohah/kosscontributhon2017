@@ -1,7 +1,7 @@
 // Tutorials of (Scatterplot d3 beautiful) by Jaydev
 
 // insert csv raw url
-d3.csv("./assets/data/result.csv", function(data){
+d3.csv("https://raw.githubusercontent.com/NohYujeong/practice_d3_js/master/result2.csv", function(data){
   /**
  * A D3 Scatter Plot chart with interactive nodes,
  * crosshair and custom axis grid.
@@ -16,8 +16,8 @@ d3.csv("./assets/data/result.csv", function(data){
   right: 30
 }
 
-// var width = totalWidth - margin.left - margin.right;
-var width=2000;
+var width = (totalWidth - margin.left - margin.right)*0.8;
+// var width=2000;
 var height = totalHeight - margin.top - margin.bottom;
 
 var formatDecimal = d3.format(',.0f');
@@ -88,7 +88,7 @@ var yAxis = d3.axisLeft(yScale).ticks(6)
 
 var svg = d3.select('#scatterPlot').append('svg')
 .attr("id", "scatterPlot")
-// .attr("width", 1500)
+// .attr("width", 1700)
 .attr("width", totalWidth)
 .attr("height", totalHeight);
   // .style( "background-color", "hsl(0, 0%, 100%)" )

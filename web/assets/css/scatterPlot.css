@@ -6,12 +6,14 @@
 }
 
 #scatterPlot{
-  margin-left:-400px;
+  /*text-align : left;*/
+  margin-left:-250px;
 }
 
-.tick {
+.tick, text {
   fill : #fff;
   font-size : 25px;
+  color : white;
 }
 
 .domain, line {
