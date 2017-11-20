@@ -1,14 +1,20 @@
 // Tutorials of (Scatterplot d3 beautiful) by Jaydev
+//document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>');
+//document.write('<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>');
+//document.write('<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>');
 
 // insert csv raw url
-d3.csv("../assets/data/result.csv", function(data){
+d3.csv("https://raw.githubusercontent.com/ohahohah/d3.js-book-examples_/master/dataset/result.csv?token=AQ_o4o-_tSyV0DiZiiYdvdSFTp29mHcpks5aG3wEwA%3D%3D", function(data){
   /**
  * A D3 Scatter Plot chart with interactive nodes,
  * crosshair and custom axis grid.
  */
 
- var totalWidth = window.innerWidth;
- var totalHeight = window.innerHeight;
+// var totalWidth = window.innerWidth;
+// var totalHeight = window.innerHeight;
+var totalWidth = 960;
+var totalHeight = 500;
+
  var margin = {
   top: 20,
   left: 50,
@@ -16,7 +22,7 @@ d3.csv("../assets/data/result.csv", function(data){
   right: 30
 }
 
-var width = (totalWidth - margin.left - margin.right)*0.8;
+var width = (totalWidth - margin.left - margin.right);
 // var width=2000;
 var height = totalHeight - margin.top - margin.bottom;
 
@@ -50,7 +56,7 @@ var xDomain = d3.extent(theData, function(d) {
   return d.cx;
 });
 
-var xRange = [-290, width];
+var xRange = [-190, width];
 var xPadding = d3.mean(theData, function(d) {
   return d.cx
 });
@@ -61,7 +67,7 @@ var yDomain = d3.extent(theData, function(d) {
   return d.cy;
 });
 var yRange = [height, 0];
-var yScale = d3.scaleLinear().domain(yDomain).range(yRange).nice(2);
+var yScale = d3.scaleLinear().domain(yDomain).range(yRange).nice(1);
 
 // COLOR SCALE
 var colorDomain = d3.extent(theData, function(d) {
@@ -81,7 +87,7 @@ var xAxis = d3.axisBottom(xScale)
 .tickSizeOuter(7);
 
 var yAxis = d3.axisLeft(yScale).ticks(6)
-.tickSizeInner(-width)
+.tickSizeInner(-width);
   //.tickSizeOuter(7);
 
 // SVG GROUP HIERARCHY
